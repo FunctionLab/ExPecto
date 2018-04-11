@@ -1,0 +1,8 @@
+h5py>=2.7.0
+numpy>=1.14.2
+pandas==0.22.0
+scipy>=0.19.1
+six>=1.11.0
+xgboost>=0.7.post4
+torch>=0.1.12
+pyfasta>=0.5.2
