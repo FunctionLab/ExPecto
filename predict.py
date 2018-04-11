@@ -109,7 +109,6 @@ def compute_effects(snpeffects, snpdists, snpstrands, all_models, maxshift=800, 
     return effect
 
 #load resources
-geneanno = pd.read_csv('./resources/geneanno.csv')
 modelList = pd.read_csv(args.modelList,sep='\t',header=0)
 models = []
 for file in modelList['ModelName']:
