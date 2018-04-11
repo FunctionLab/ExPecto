@@ -1,12 +1,11 @@
-## Background
+This repository contains code for predicting expression effects for human genome variants with ExPecto models and training new sequence-based expression model with any expression profile. 
 
-This code repository contains code for predicting expression effects for human genome variants and training new expression models. The ExPecto framework is described in the following manuscript:
-
-Jian Zhou, Chandra L. Theesfeld, Kevin Yao, Kathleen M. Chen, Aaron K. Wong,  and Olga G. Troyanskaya, Deep learning sequence-based ab initio expression prediction and disease-risk identification, Nature Genetics, 2018 (Accepted)
+The ExPecto framework is described in the following manuscript: Jian Zhou, Chandra L. Theesfeld, Kevin Yao, Kathleen M. Chen, Aaron K. Wong,  and Olga G. Troyanskaya, Deep learning sequence-based ab initio expression prediction and disease-risk identification
 
 ## Install
 Use `pip install -r requirements.txt` to install the dependencies.
 Run `sh download_resources.sh; tar xf resources.tar.gz` to download and extract necessary model files and chromatin representations for training new ExPecto models.
+
 ## Usage
 
 ##### Example run :
@@ -39,4 +38,5 @@ python ./train.py --expFile ./resources/geneanno.exp.csv --targetIndex 1 --outpu
 This trains an ExPecto model using the Adipose gene expression profile in the first column of the `geneanno.exp.csv` file. `./Xreducedall.2002.npy` is the default precomputed epigenomic features. For training new ExPecto model(s) for your custom (differential) expression profile, replace geneanno.exp.csv with the expression profile. Each row in the file has to be the expression value of gene. The gene order has to be the same as the geneanno.csv. The generated model can be used by `predict.py` by adding the path of the model file ('.save') to the `modelList` file.
 
 
-Contact me: Jian Zhou [jzhoup@gmail.com](mailto:jzhoup@gmail.com)
+##### Contact me: 
+Jian Zhou [jzhoup@gmail.com](mailto:jzhoup@gmail.com)
