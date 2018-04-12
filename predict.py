@@ -157,7 +157,7 @@ else:
     dist = args.fixeddist
 genename = np.asarray(gene.iloc[geneinds,-2])
 strand= np.asarray(gene.iloc[geneinds,-3])
-print(strand)
+
 #comptue expression effects
 snpExpEffects = compute_effects(snpEffects, \
                                 dist, strand,\
@@ -168,6 +168,5 @@ snpExpEffects_df = coor
 snpExpEffects_df['dist'] = dist
 snpExpEffects_df['gene'] = genename
 snpExpEffects_df['strand'] = strand
-
-snpExpEffects_df=pd.concat([snpExpEffects_df.reset_index(),pd.DataFrame(snpExpEffects)],axis=1,ignore_index =True)
-snpExpEffects_df.to_csv(args.output, header = False)
+snpExpEffects_df=pd.concat([snpExpEffects_df.reset_index(),pd.DataFrame(snpExpEffects, columns = modelList.iloc[:,1])],axis=1,ignore_index =False)
+snpExpEffects_df.to_csv(args.output, header = True)
