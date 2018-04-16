@@ -1,0 +1,54 @@
+ModelName	Tissue
+200k_1.model	Adipose Subcutaneous
+200k_2.model	Adipose Visceral Omentum
+200k_3.model	Adrenal Gland
+200k_4.model	Artery Aorta
+200k_5.model	Artery Coronary
+200k_6.model	Artery Tibial
+200k_7.model	Bladder
+200k_8.model	Brain Amygdala
+200k_9.model	Brain Anterior Cingulate Cortex BA24
+200k_10.model	Brain Caudate Basal Ganglia
+200k_11.model	Brain Cerebellar Hemisphere
+200k_12.model	Brain Cerebellum | GTEx
+200k_13.model	Brain Cortex
+200k_14.model	Brain Frontal Cortex BA9
+200k_15.model	Brain Hippocampus
+200k_16.model	Brain Hypothalamus
+200k_17.model	Brain Nucleus Accumbens Basal Ganglia
+200k_18.model	Brain Putamen Basal Ganglia
+200k_19.model	Brain Spinal Cord Cervical C1
+200k_20.model	Brain Substantia Nigra
+200k_21.model	Breast Mammary Tissue
+200k_22.model	Cells EBV-Transformed Lymphocytes
+200k_23.model	Cells Transformed Fibroblasts
+200k_24.model	Cervix Ectocervix
+200k_25.model	Cervix Endocervix
+200k_26.model	Colon Sigmoid
+200k_27.model	Colon Transverse
+200k_28.model	Esophagus Gastroesophageal Junction
+200k_29.model	Esophagus Mucosa
+200k_30.model	Esophagus Muscularis
+200k_31.model	Fallopian Tube
+200k_32.model	Heart Atrial Appendage
+200k_33.model	Heart Left Ventricle
+200k_34.model	Kidney Cortex
+200k_35.model	Liver | GTEx
+200k_36.model	Lung | GTEx
+200k_37.model	Minor Salivary Gland
+200k_38.model	Muscle Skeletal
+200k_39.model	Nerve Tibial
+200k_40.model	Ovary | GTEx
+200k_41.model	Pancreas | GTEx
+200k_42.model	Pituitary
+200k_43.model	Prostate
+200k_44.model	Skin Not Sun Exposed Suprapubic
+200k_45.model	Skin Sun Exposed Lower Leg
+200k_46.model	Small Intestine Terminal Ileum
+200k_47.model	Spleen | GTEx
+200k_48.model	Stomach | GTEx
+200k_49.model	Testis
+200k_50.model	Thyroid | GTEx
+200k_51.model	Uterus | GTEx
+200k_52.model	Vagina
+200k_53.model	Whole Blood
