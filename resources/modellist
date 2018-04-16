@@ -33,7 +33,7 @@ ModelName	Tissue
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Heart_Atrial_Appendage.save	Heart Atrial Appendage
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Heart_Left_Ventricle.save	Heart Left Ventricle
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Kidney_Cortex.save	Kidney Cortex
-./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Liver.save	Liver | ENCODE
+./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Liver.save	Liver | GTEx
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Lung.save	Lung | GTEx
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Minor_Salivary_Gland.save	Minor Salivary Gland
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Muscle_Skeletal.save	Muscle Skeletal
@@ -46,10 +46,10 @@ ModelName	Tissue
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Skin_Sun_Exposed_Lower_leg.save	Skin Sun Exposed Lower Leg
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Small_Intestine_Terminal_Ileum.save	Small Intestine Terminal Ileum
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Spleen.save	Spleen | GTEx
-./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Stomach.save	Stomach | ENCODE
+./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Stomach.save	Stomach | GTEx
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Testis.save	Testis
-./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Thyroid.save	Thyroid | ENCODE
-./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Uterus.save	Uterus | ENCODE
+./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Thyroid.save	Thyroid | GTEx
+./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Uterus.save	Uterus | GTEx
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Vagina.save	Vagina
 ./models/allhistones2000.1.fixed.all.pseudocount0.0001.lambda100.round100.basescore2.Whole_Blood.save	Whole Blood
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.4star.save	4Star-hESC
@@ -85,18 +85,18 @@ ModelName	Tissue
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HELA.save	HELA
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HMEC.save	HMEC
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HSMM.save	HSMM
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HT-29.save	HT1080
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HT1080.save	HT-29
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HT-29.save	HT-29
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HT1080.save	HT1080
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HUES64_Cell_Line.save	HUES64 Cell Line
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HUVEC.save	HUVEC
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HepG2.1.save	HepG2 | Roadmap
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.HepG2.save	HepG2 | ENCODE
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.K562.1.save	K562 | ENCODE
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.K562.save	K562 | Roadmap
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.K562.1.save	K562 | Roadmap
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.K562.save	K562 | ENCODE
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.Karpas-422.save	Karpas-422
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.LHCN-M2.save	LHCN-M2
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.Left_Ventricle.save	Left Ventricle
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.Lung.1.save	Lung Microvascular Endothelial Cell
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.Lung.1.save	Lung | Roadmap
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.M059J.save	M059J
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.MCF-7.save	MCF-7
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.MG63.save	MG63
@@ -124,8 +124,8 @@ ModelName	Tissue
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.Right_Ventricle.save	Right Ventricle
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.SJCRH30.save	SJCRH30
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.SJSA1.save	SJSA1
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.SK-MEL-5.save	Skeletal Muscle Tissue
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.SK-N-DZ.save	Skin of Body
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.SK-MEL-5.save	SK-MEL-5
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.SK-N-DZ.save	SK-N-DZ
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.Sigmoid_Colon.save	Sigmoid Colon
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.Small_Intestine.save	Small Intestine
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.Spleen.1.save	Spleen | Roadmap
@@ -152,7 +152,7 @@ ModelName	Tissue
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.endothelial_cell_of_coronary_artery.save	Endothelial Cell of Coronary Artery
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.endothelial_cell_of_umbilical_vein.save	Endothelial Cell of Umbilical Vein
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.epithelial_cell_of_alveolus_of_lung.save	Epithelial Cell of Alveolus of Lung
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.epithelial_cell_of_proximal_tubule.save	NA
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.epithelial_cell_of_proximal_tubule.save	Epithelial Cell of Proximal Tuble
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.epithelial_cell_of_umbilical_artery.save	Epithelial Cell of Umbilical Artery
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.fibroblast_of_arm.save	Fibroblast of Arm
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.fibroblast_of_dermis.save	Fibroblast of Dermis
@@ -173,9 +173,9 @@ ModelName	Tissue
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.induced_pluripotent_stem_cell.save	Induced Pluripotent Stem Cell
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.keratinocyte.save	Keratinocyte
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.kidney_epithelial_cell.save	Kidney Epithelial Cell
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.liver.save	Liver | GTEx
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.lung.save	Lung | Roadmap
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.lung_microvascular_endothelial_cell.save	Lung | ENCODE
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.liver.save	Liver | ENCODE
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.lung.save	Lung | ENCODE
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.lung_microvascular_endothelial_cell.save	Lung Microvascular Endothelial Cell
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.mammary_epithelial_cell.save	Mammary Epithelial Cell
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.mammary_microvascular_endothelial_cell.save	Mammary Microvascular Endothelial Cell
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.melanocyte_of_skin.save	Melanocyte of Skin
@@ -194,10 +194,10 @@ ModelName	Tissue
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.pulmonary_artery_endothelial_cell.save	Pulmonary Artery Endothelial Cell
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.regular_cardiac_myocyte.save	Regular Cardiac Myocyte
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.renal_cortical_epithelial_cell.save	Renal Cortical Epithelial Cell
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.skeletal_muscle_myoblast.save	SK-MEL-5
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.skeletal_muscle_satellite_cell.save	SK-N-DZ
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.skeletal_muscle_tissue.save	Skeletal Muscle Myoblast
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.skin_of_body.save	Skeletal Muscle Satellite Cell
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.skeletal_muscle_myoblast.save	Skeletal Muscle Myoblast
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.skeletal_muscle_satellite_cell.save	Skeletal Muscle Satellite Cell
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.skeletal_muscle_tissue.save	Skeletal Muscle Tissue
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.skin_of_body.save	Skin of Body
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.smooth_muscle_cell.save	Smooth Muscle Cell
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.smooth_muscle_cell_of_bladder.save	Smooth Muscle Cell of Bladder
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.smooth_muscle_cell_of_the_coronary_artery.save	Smooth Muscle Cell of The Coronary Artery
@@ -205,15 +205,15 @@ ModelName	Tissue
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.smooth_muscle_cell_of_the_umbilical_artery.save	Smooth Muscle Cell of The Umbilical Artery
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.smooth_muscle_cell_of_trachea.save	Smooth Muscle Cell of Trachea
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.spinal_cord.save	Spinal Cord
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.stomach.save	Stomach | GTEx
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.stomach.save	Stomach | ENCODE
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.subcutaneous_preadipocyte.save	Subcutaneous Preadipocyte
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.temporal_lobe.save	Temporal Lobe
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.thoracic_aorta_endothelial_cell.save	Thoracic Aorta Endothelial Cell
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.thyroid_gland.save	Thyroid | GTEx
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.thyroid_gland.save	Thyroid | ENCODE
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.tongue.save	Tongue
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.tracheal_epithelial_cell.save	Tracheal Epithelial Cell
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.umbilical_cord.save	Umbilical Cord
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.urinary_bladder.save	Urinary Bladder
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.uterine_smooth_muscle_cell.save	Uterine Smooth Muscle Cell
-./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.uterus.save	Uterus | GTEx
+./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.uterus.save	Uterus | ENCODE
 ./models/allhistones2000.1.fixed.all.pseudocount0.01.lambda100.round100.basescore2.vein_endothelial_cell.save	Vein Endothelial Cell
