@@ -8,10 +8,9 @@ Clone the repository first:
 git clone https://github.com/FunctionLab/ExPecto.git;
 cd ExPecto;
 ```
-Use `pip install -r requirements.txt` to install the dependencies. If you encounter any issue installing pytorch, follow instructions from http://pytorch.org/.
+Use `pip install -r requirements.txt` to install the dependencies. If you have a CUDA-enabled GPU, we highly recommend installing pytorch with GPU support following instructions from http://pytorch.org/.
 
-Run `sh download_resources.sh; tar xf resources.tar.gz` to download and extract necessary model files and chromatin representations for training new ExPecto models. If the code reports error when loading `./resources/hg19.fa.flat`, try removing it and it will be remade next time you run the code.
-
+Run `sh download_resources.sh; tar xf resources.tar.gz` to download and extract necessary model files and chromatin representations for training new ExPecto models. 
 ## Usage
 
 ### Example:
@@ -20,11 +19,18 @@ python chromatin.py ./example/example.vcf
 python predict.py --coorFile ./example/example.vcf --geneFile ./example/example.vcf.bed.sorted.bed.closestgene --snpEffectFilePattern ./example/example.vcf.shift_SHIFT.diff.h5 --modelList ./resources/modellist --output output.csv
 ```
 
-The output will be saved to output.csv. The first few columns of the csv file will be the same as the vcf files. The additional columns include predicted expression effect (log fold change) for each of the input models in the order given by the modelList file. `chromatin.py` computes the chromatin effects of the variant both on-site and to nearby regions, using trained convolutional neural network model. `predict.py` computes predicted tissue-specific expression effects from the predicted chromatin effects.
+The output will be saved to output.csv. The first few columns of the csv file will be the same as the vcf files. The additional columns include predicted expression effect (log fold change) for each of the input models in the order given by the modelList file. 
+
+If `./resources/hg19.fa.flat` cannot be loaded, try removing it and it will be generated next time you run the code. 
 
 #### Details:
 
+`chromatin.py` computes the chromatin effects of the variants, using trained convolutional neural network model. 
+
+`predict.py` computes predicted tissue-specific expression effects which takes predicted chromatin effects as input.
+
 `--coorFile ./example/example.vcf` specifies the variants of interest in vcf format.
+
 `--closestGeneFile ./example/example.vcf.bed.sorted.bed.closestgene` specifies the gene association file which decides for each variant the associated gene for which the expression effect is predicted. The content of the gene association file has to include the following information: the first column and third columns are chromosome names and positions, and the last three columns are the strand of the associated gene, the ENSEMBL gene id (matched with the gene annotation file `./resources/geneanno.csv`) and distance to the representative TSS of that gene. The row order gene association file does not need to be in the same as the vcf file. The distance should be signed and calculated as '' TSS position - variant position" regardless of on which strand the gene is transcribed. The representive TSSes can be found in the provided geneanno.csv file. The associated gene can be specified by finding the closest representative TSS. When is known of gene is of interest, such as for eQTL predictions, the know gene association can be used. This can be done for example using closest-features from [BEDOPS](https://bedops.readthedocs.io/en/latest/) and the representation TSS of protein coding genes that we included, for example:
 ```bash
 closest-features --delim '\t' --closest --dist <(awk '{printf $1"\t"$2-1"\t"$2"\n"}' ./example/example.vcf|sort-bed - ) ./resources/geneanno.pc.sorted.bed > ./example/example.vcf.bed.sorted.bed.closestgene
@@ -44,7 +50,7 @@ This trains an ExPecto model using the Adipose gene expression profile in the fi
 
 ### Citation
 
-The ExPecto framework is described in the following manuscript: Jian Zhou, Chandra L. Theesfeld, Kevin Yao, Kathleen M. Chen, Aaron K. Wong,  and Olga G. Troyanskaya, Deep learning sequence-based ab initio expression prediction and disease-risk identification
+The ExPecto framework is described in the following manuscript: Jian Zhou, Chandra L. Theesfeld, Kevin Yao, Kathleen M. Chen, Aaron K. Wong,  and Olga G. Troyanskaya, Deep learning sequence-based ab initio prediction of variant effects on expression and disease risk
 
 ### Contact me
 Jian Zhou [jzhoup@gmail.com](mailto:jzhoup@gmail.com)
