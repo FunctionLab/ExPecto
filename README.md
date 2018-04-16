@@ -42,9 +42,9 @@ python ./train.py --expFile ./resources/geneanno.exp.csv --targetIndex 1 --outpu
 This trains an ExPecto model using the Adipose gene expression profile in the first column of the `geneanno.exp.csv` file and the default precomputed epigenomic features. For training new ExPecto model for your custom (differential) expression profile, replace geneanno.exp.csv with your expression profile. The gene order has to be the same as the geneanno.csv. The generated model can be used by `predict.py` by adding the path of the xgboost model file to the `modelList` file.
 
 
-##### Citation
+### Citation
 
 The ExPecto framework is described in the following manuscript: Jian Zhou, Chandra L. Theesfeld, Kevin Yao, Kathleen M. Chen, Aaron K. Wong,  and Olga G. Troyanskaya, Deep learning sequence-based ab initio expression prediction and disease-risk identification
 
-##### Contact me
+### Contact me
 Jian Zhou [jzhoup@gmail.com](mailto:jzhoup@gmail.com)
