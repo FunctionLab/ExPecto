@@ -31,7 +31,7 @@ parser.add_argument('--cuda', action='store_true')
 args = parser.parse_args()
 
 genome = pyfasta.Fasta('./resources/hg19.fa')
-model = load_lua('./resources/expecto.nn.2002.cpu')
+model = load_lua('./resources/deepsea.beluga.2002.cpu')
 model.evaluate()
 if args.cuda:
     model.cuda()
