@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 import h5py
 
-parser = argparse.ArgumentParser(description='Process some integers.')
+parser = argparse.ArgumentParser(description='Predict variant chromatin effects')
 parser.add_argument('inputfile', type=str, help='Input file in vcf format')
 parser.add_argument('--maxshift', action="store",
                     dest="maxshift", type=int, default=800,
