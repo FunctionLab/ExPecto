@@ -76,7 +76,7 @@ dtest.set_label(np.asarray(
     np.log(geneexp.iloc[(testind) * filt, args.targetIndex] + args.pseudocount)))
 
 param = {'booster': 'gblinear', 'base_score': args.base_score, 'alpha': 0,
-         'lambda': args.l2, 'bst:eta': args.eta, 'objective': 'reg:linear',
+         'lambda': args.l2, 'eta': args.eta, 'objective': 'reg:linear',
          'nthread': args.threads, "early_stopping_rounds": 10}
 
 evallist = [(dtest, 'eval'), (dtrain, 'train')]
