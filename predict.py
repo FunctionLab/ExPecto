@@ -2,7 +2,7 @@
 """Predict variant expression effects
 
 This script takes the predicted chromatin effects computed by chromatin.py and 
-expression model files, and predicted expression effects in all models provided
+expression model file list, and predict expression effects in all models provided
 in the model list.
 
 Example:
