@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Predict variant expression effects
 
-This script takes a vcf file, compute the effect of the variant both at the
-variant position and at nearby positions, and output the effects as the
-representation that can be used by predict.py.
+This script takes the predicted chromatin effects computed by chromatin.py and 
+expression model files, and predicted expression effects in all models provided
+in the model list.
 
 Example:
         $ python predict.py --coorFile ./example/example.vcf --geneFile ./example/example.vcf.bed.sorted.bed.closestgene --snpEffectFilePattern ./example/example.vcf.shift_SHIFT.diff.h5 --modelList ./resources/modellist --output output.csv
