@@ -25,7 +25,9 @@ If `./resources/hg19.fa.flat` cannot be loaded, try removing it and it will be g
 
 #### Details:
 
-`chromatin.py` computes the chromatin effects of the variants, using trained convolutional neural network model. 
+
+`chromatin.py` computes the chromatin effects of the variants, using trained convolutional neural network model. The input vcf files need to contain only variant with a single alternative allele. Variants such as `A T,AT` is not recognized and you can split it into biallelic variants to run it.
+
 
 `predict.py` computes predicted tissue-specific expression effects which takes predicted chromatin effects as input.
 
@@ -36,11 +38,12 @@ If `./resources/hg19.fa.flat` cannot be loaded, try removing it and it will be g
 closest-features --delim '\t' --closest --dist <(awk '{printf $1"\t"$2-1"\t"$2"\n"}' ./example/example.vcf|sort-bed - ) ./resources/geneanno.pc.sorted.bed > ./example/example.vcf.bed.sorted.bed.closestgene
 ```
 
-`--snpEffectFilePattern ./example/example.vcf_shiftSHIFT_outdir/infile.vcf.wt2100.fasta.ref.h5.diff.h5` specifies the name pattern of the input epigenomic effect prediction files. `SHIFT` string is a placeholder that is substituted automatically to the shift positions (e.g. 0, -200, -400, ...). For generating the epigenomic effect predictions, use the scripts under ./convnet directory and see instructions. Note that we will soon release a pure python version of convnet.
+`--snpEffectFilePattern ./example/example.vcf_shiftSHIFT_outdir/infile.vcf.wt2100.fasta.ref.h5.diff.h5` specifies the name pattern of the input epigenomic effect prediction files. Note these files are the output from `chromatin.py`. `SHIFT` string is a placeholder that is substituted automatically to the shift positions (e.g. 0, -200, -400, ...). 
 
-Optional:  For very large input files use the split functionality to distribute the prediction into multiple runs. For example, `--splitFlag --splitIndex 0 --splitFold 10` will divide the input into 10 chunks and process only the first chunk.
 
-### Training Example :
+Optional:  For very large input files use the split functionality to distribute the prediction into multiple runs. For `predict.py` you can use for example `--splitFlag --splitIndex 0 --splitFold 10` to divide the input into 10 chunks and process only the first chunk.
+
+### Training example:
 ```bash
 python ./train.py --expFile ./resources/geneanno.exp.csv --targetIndex 1 --output model.adipose
 ```
