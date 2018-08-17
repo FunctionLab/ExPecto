@@ -90,7 +90,7 @@ def compute_effects(snpeffects, snpdists, snpstrands, all_models, maxshift=800, 
     effect = np.zeros((n_snps, len(all_models)))
 
 
-    for i in range(int(n_snps / batchSize) + 1):
+    for i in range(int( (n_snps - 1) / batchSize) + 1):
         print("Processing " + str(i) + "th batch of "+str(batchSize))
         # compute gene expression change with models
         diff = reduce(lambda x, y: x + y, [np.tile(np.asarray(snpeffects[j][i * batchSize:(i + 1) * batchSize, :]), 10)
