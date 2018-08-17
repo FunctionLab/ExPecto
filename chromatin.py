@@ -150,7 +150,7 @@ for shift in [0, ] + list(range(-200, -maxshift - 1, -200)) + list(range(200, ma
     #print(alt_encoded.shape)
 
     ref_preds = []
-    for i in range(int(1 + ref_encoded.shape[0] / batchSize)):
+    for i in range(int(np.ceil(ref_encoded.shape[0] / float(batchSize)))):
         input = torch.from_numpy(ref_encoded[int(i*batchSize):int((i+1)*batchSize),:,:]).unsqueeze(3)
         if args.cuda:
             input = input.cuda()
@@ -158,7 +158,7 @@ for shift in [0, ] + list(range(-200, -maxshift - 1, -200)) + list(range(200, ma
     ref_preds = np.vstack(ref_preds)
 
     alt_preds = []
-    for i in range(int(1 + alt_encoded.shape[0] / batchSize)):
+    for i in range(int(np.ceil(alt_encoded.shape[0] / float(batchSize)))):
         input = torch.from_numpy(alt_encoded[int(i*batchSize):int((i+1)*batchSize),:,:]).unsqueeze(3)
         if args.cuda:
             input = input.cuda()
