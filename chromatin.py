@@ -132,7 +132,7 @@ for shift in [0, ] + list(range(-200, -maxshift - 1, -200)) + list(range(200, ma
     ref_matched_bools = []
     for i in range(vcf.shape[0]):
         refseq, altseq, ref_matched_bool = fetchSeqs(
-            vcf[0][i], vcf[1][i], vcf[3][i], vcf[4][i], shift=shift)
+            vcf[0][i], vcf[1][i], vcf[3][i], vcf[4][i], shift=shift, inputsize=inputsize)
         refseqs.append(refseq)
         altseqs.append(altseq)
         ref_matched_bools.append(ref_matched_bool)
@@ -144,8 +144,8 @@ for shift in [0, ] + list(range(-200, -maxshift - 1, -200)) + list(range(200, ma
         print("Number of input variants:")
         print(len(ref_matched_bools))
 
-    ref_encoded = encodeSeqs(refseqs).astype(np.float32)
-    alt_encoded = encodeSeqs(altseqs).astype(np.float32)
+    ref_encoded = encodeSeqs(refseqs, inputsize=inputsize).astype(np.float32)
+    alt_encoded = encodeSeqs(altseqs, inputsize=inputsize).astype(np.float32)
     #print(ref_encoded.shape)
     #print(alt_encoded.shape)
 
