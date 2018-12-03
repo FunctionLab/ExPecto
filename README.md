@@ -50,7 +50,9 @@ Optional:  For very large input files use the split functionality to distribute 
 python ./train.py --expFile ./resources/geneanno.exp.csv --targetIndex 1 --output model.adipose
 ```
 
-This trains an ExPecto model using the Adipose gene expression profile in the first column of the `geneanno.exp.csv` file and the default precomputed epigenomic features. For training new ExPecto model for your custom (differential) expression profile, replace geneanno.exp.csv with your expression profile. The gene order has to be the same as the geneanno.csv. The generated model can be used by `predict.py` by adding the path of the xgboost model file to the `modelList` file.
+This trains an ExPecto model using the Adipose gene expression profile in the first column of the `geneanno.exp.csv` file and the default precomputed epigenomic features. For training new ExPecto model for your custom (differential) expression profile, replace geneanno.exp.csv with your expression profile. The gene order has to be the same as the geneanno.csv. 
+
+To use the trained model(s) can be used by `predict.py` by adding the path of the xgboost model file to a new `modelList` file. Note that the new models should be put in a separate modellist file not mixed with provided models, because the provided models were in a format not compatible with newly trained models.
 
 
 

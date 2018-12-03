@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Predict variant expression effects
 
-This script takes the predicted chromatin effects computed by chromatin.py and 
+This script takes the predicted chromatin effects computed by chromatin.py and
 expression model file list, and predicts expression effects in all models provided
 in the model list.
 
@@ -46,7 +46,7 @@ parser.add_argument('--threads', action="store", dest="threads",
 args = parser.parse_args()
 
 
-def compute_effects(snpeffects, snpdists, snpstrands, all_models, maxshift=800, nfeatures=2002, batchSize=500):
+def compute_effects(snpeffects, snpdists, snpstrands, all_models, maxshift=800, nfeatures=2002, batchSize=500,old_format=False):
     """Compute expression effects (log fold-change).
 
     Args:
@@ -119,7 +119,8 @@ for file in modelList['ModelName']:
 # backward compatibility with earlier model format
 if len(bst.get_dump()[0].split('\n')) == 20034:
     old_format = True
-
+else:
+    old_format = False
 
 
 #load input data
@@ -162,7 +163,7 @@ strand= np.asarray(gene.iloc[geneinds,-3])
 snpExpEffects = compute_effects(snpEffects, \
                                 dist, strand,\
                                 models, maxshift=maxshift, nfeatures=args.nfeatures,
-                                batchSize = args.batchSize)
+                                batchSize = args.batchSize, old_format = old_format)
 #write output
 snpExpEffects_df = coor
 snpExpEffects_df['dist'] = dist
