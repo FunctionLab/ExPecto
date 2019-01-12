@@ -10,7 +10,8 @@ Clone the repository first:
 git clone https://github.com/FunctionLab/ExPecto.git;
 cd ExPecto;
 ```
-Use `pip install -r requirements.txt` to install the dependencies. If you have a CUDA-enabled GPU, we highly recommend installing pytorch with GPU support following instructions from http://pytorch.org/.
+Use `pip install -r requirements.txt` to install the dependencies. In addition you need to install pytorch version 0.4.1 (pytorch 1.0.0 has removed the ability to load legacy torch models). See https://pytorch.org/get-started/previous-versions/ for instruction of installation of pytorch 0.4.1. 
+
 
 Run `sh download_resources.sh; tar xf resources.tar.gz` to download and extract necessary model files and chromatin representations for training new ExPecto models. 
 ## Usage
