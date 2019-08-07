@@ -11,7 +11,7 @@ git clone https://github.com/FunctionLab/ExPecto.git
 cd ExPecto
 sh download_resources.sh; tar xf resources_20190807.tar.gz
 ```
-Use `pip install -r requirements.txt` to install the dependencies. In addition you need to install pytorch version 0.4.1 (pytorch 1.0.0 has removed the ability to load legacy torch models). See https://pytorch.org/get-started/previous-versions/ for instruction of installation of pytorch 0.4.1. 
+Install PyTorch following instructions from https://pytorch.org/.  Use `pip install -r requirements.txt` to install the other dependencies.
 
 
  
