@@ -13,7 +13,7 @@ import argparse
 import math
 import pyfasta
 import torch
-from torch.utils.serialization import load_lua
+from torch import nn
 import numpy as np
 import pandas as pd
 import h5py
@@ -31,8 +31,60 @@ parser.add_argument('--cuda', action='store_true')
 args = parser.parse_args()
 
 genome = pyfasta.Fasta('./resources/hg19.fa')
-model = load_lua('./resources/deepsea.beluga.2002.cpu')
-model.evaluate()
+
+class LambdaBase(nn.Sequential):
+    def __init__(self, fn, *args):
+        super(LambdaBase, self).__init__(*args)
+        self.lambda_func = fn
+
+    def forward_prepare(self, input):
+        output = []
+        for module in self._modules.values():
+            output.append(module(input))
+        return output if output else input
+
+class Lambda(LambdaBase):
+    def forward(self, input):
+        return self.lambda_func(self.forward_prepare(input))
+
+class Beluga(nn.Module):
+    def __init__(self):
+        super(Beluga, self).__init__()
+        self.model = nn.Sequential(
+            nn.Sequential(
+                nn.Conv2d(4,320,(1, 8)),
+                nn.ReLU(),
+                nn.Conv2d(320,320,(1, 8)),
+                nn.ReLU(),
+                nn.Dropout(0.2),
+                nn.MaxPool2d((1, 4),(1, 4)),
+                nn.Conv2d(320,480,(1, 8)),
+                nn.ReLU(),
+                nn.Conv2d(480,480,(1, 8)),
+                nn.ReLU(),
+                nn.Dropout(0.2),
+                nn.MaxPool2d((1, 4),(1, 4)),
+                nn.Conv2d(480,640,(1, 8)),
+                nn.ReLU(),
+                nn.Conv2d(640,640,(1, 8)),
+                nn.ReLU(),
+            ),
+            nn.Sequential(
+                nn.Dropout(0.5),
+                Lambda(lambda x: x.view(x.size(0),-1)),
+                nn.Sequential(Lambda(lambda x: x.view(1,-1) if 1==len(x.size()) else x ),nn.Linear(67840,2003)),
+                nn.ReLU(),
+                nn.Sequential(Lambda(lambda x: x.view(1,-1) if 1==len(x.size()) else x ),nn.Linear(2003,2002)),
+            ),
+            nn.Sigmoid(),
+        )
+
+    def forward(self, x):
+        return self.model(x)
+
+model = Beluga()
+model.load_state_dict(torch.load('./resources/deepsea.beluga.pth'))
+model.eval()
 if args.cuda:
     model.cuda()
 
@@ -151,18 +203,18 @@ for shift in [0, ] + list(range(-200, -maxshift - 1, -200)) + list(range(200, ma
 
     ref_preds = []
     for i in range(int(1 + (ref_encoded.shape[0]-1) / batchSize)):
-        input = torch.from_numpy(ref_encoded[int(i*batchSize):int((i+1)*batchSize),:,:]).unsqueeze(3)
+        input = torch.from_numpy(ref_encoded[int(i*batchSize):int((i+1)*batchSize),:,:]).unsqueeze(2)
         if args.cuda:
             input = input.cuda()
-        ref_preds.append(model.forward(input).cpu().numpy().copy())
+        ref_preds.append(model.forward(input).cpu().detach().numpy().copy())
     ref_preds = np.vstack(ref_preds)
 
     alt_preds = []
     for i in range(int(1 + (alt_encoded.shape[0]-1) / batchSize)):
-        input = torch.from_numpy(alt_encoded[int(i*batchSize):int((i+1)*batchSize),:,:]).unsqueeze(3)
+        input = torch.from_numpy(alt_encoded[int(i*batchSize):int((i+1)*batchSize),:,:]).unsqueeze(2)
         if args.cuda:
             input = input.cuda()
-        alt_preds.append(model.forward(input).cpu().numpy().copy())
+        alt_preds.append(model.forward(input).cpu().detach().numpy().copy())
     alt_preds = np.vstack(alt_preds)
 
     #ref_preds = np.vstack(map(lambda x: model.forward(x).numpy(),

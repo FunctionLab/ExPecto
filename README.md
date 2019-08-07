@@ -7,12 +7,13 @@ The ExPecto framework is described in the following manuscript: Jian Zhou, Chand
 ## Install
 Clone the repository first:
 ```bash
-git clone https://github.com/FunctionLab/ExPecto.git;
-cd ExPecto;
+git clone https://github.com/FunctionLab/ExPecto.git
+cd ExPecto
+sh download_resources.sh; tar xf resources_20190807.tar.gz
 ```
 Use `pip install -r requirements.txt` to install the dependencies. If you have a CUDA-enabled GPU, we highly recommend installing pytorch with GPU support following instructions from http://pytorch.org/.
 
-Run `sh download_resources.sh; tar xf resources.tar.gz` to download and extract necessary model files and chromatin representations for training new ExPecto models. 
+ 
 ## Usage
 
 ### Example:
