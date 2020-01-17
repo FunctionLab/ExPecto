@@ -3,6 +3,6 @@ numpy>=1.14.2
 pandas==0.22.0
 scipy>=0.19.1
 six>=1.11.0
-xgboost==0.7.post4
+xgboost==0.90
 pyfasta>=0.5.2
 torch>=1.0.0

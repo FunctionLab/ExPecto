@@ -38,7 +38,7 @@ parser.add_argument('--num_round', action="store",
 parser.add_argument('--l2', action="store", dest="l2", type=float, default=100)
 parser.add_argument('--l1', action="store", dest="l1", type=float, default=0)
 parser.add_argument('--eta', action="store", dest="eta",
-                    type=float, default=0.01)
+                    type=float, default=1)
 parser.add_argument('--base_score', action="store",
                     dest="base_score", type=float, default=2)
 parser.add_argument('--threads', action="store",
@@ -87,6 +87,8 @@ evallist = [(dtest, 'eval'), (dtrain, 'train')]
 num_round = args.num_round
 bst = xgb.train(param, dtrain, num_round, evallist)
 ypred = bst.predict(dtest)
+print(spearmanr(ypred, np.asarray(
+     np.log(geneexp.iloc[(testind) * filt, args.targetIndex] + args.pseudocount))))
 if args.evalFile != '':
     evaldf = pd.DataFrame({'pred':ypred,'target':np.asarray(
      np.log(geneexp.iloc[(testind) * filt, args.targetIndex] + args.pseudocount))})
