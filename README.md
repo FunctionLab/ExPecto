@@ -13,7 +13,7 @@ sh download_resources.sh; tar xf resources_20190807.tar.gz
 ```
 Install PyTorch following instructions from https://pytorch.org/.  Use `pip install -r requirements.txt` to install the other dependencies.
 
-
+Note that for training new models with `train.py` the default hyperparameters are only compatible with xgboost version 0.7.post4. Make sure to install the correct version e.g. `pip install xgboost=0.7.post4`. The default hyperparameter is not compatible with newer xgboost versions. 
  
 ## Usage
 

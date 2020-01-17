@@ -38,7 +38,7 @@ parser.add_argument('--num_round', action="store",
 parser.add_argument('--l2', action="store", dest="l2", type=float, default=100)
 parser.add_argument('--l1', action="store", dest="l1", type=float, default=0)
 parser.add_argument('--eta', action="store", dest="eta",
-                    type=float, default=1)
+                    type=float, default=0.01)
 parser.add_argument('--base_score', action="store",
                     dest="base_score", type=float, default=2)
 parser.add_argument('--threads', action="store",
