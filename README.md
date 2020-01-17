@@ -56,7 +56,7 @@ This trains an ExPecto model using the Adipose gene expression profile in the fi
 
 The new trained model(s) can be used by `predict.py` by adding the path of the xgboost model file to a new `modelList` file. The new models should be put in a separate modellist file not mixed with provided models, because the provided models were in an old legacy format incompatible with new trained models.
 
-
+*** Note that for training new models with train.py, the default hyperparameters are only compatible with xgboost version 0.7.post4. Make sure to install the correct version e.g. pip install xgboost=0.7.post4. The default hyperparameters are not compatible with newer xgboost versions. ***
 
 
 ### Contact me
