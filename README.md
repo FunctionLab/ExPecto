@@ -5,7 +5,7 @@ The ExPecto framework is described in the following manuscript: Jian Zhou, Chand
 
 
 ## Install
-#### Important Note: that for training new models with `train.py`, the default hyperparameters are only compatible with xgboost version 0.7.post4. Please make sure to install the version 0.7.post4 e.g. `pip install xgboost=0.7.post4`. The default hyperparameters are not compatible with newer xgboost versions. 
+#### Important Note: that for training new models with `train.py`, the default hyperparameters are only compatible with xgboost version 0.7.post4. Please make sure to install the version 0.7.post4 `pip install xgboost=0.7.post4`. The default hyperparameters are not compatible with newer xgboost versions. 
 
 Clone the repository first:
 ```bash
